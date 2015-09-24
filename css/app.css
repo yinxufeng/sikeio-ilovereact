@@ -34,9 +34,16 @@ body {
   font-weight: 200;
 }
 
+img {
+  position: relative;
+/*  z-index: -1;*/
+}
+
 h1 {
   font-size: 64px;
   font-weight: 100;
+  position: relative;
+/*  z-index: -1;*/
 }
 
 h2 {
@@ -76,8 +83,6 @@ a:hover {
 
 .second, .third {
     flex-direction: row;
-/*    align-items: center;*/
-/*    justify-content: center;*/
 }
 
 .iphone-demo {
@@ -85,7 +90,16 @@ a:hover {
   flex-basis: 0;
   align-self: stretch;
   justify-content: center;
-  background-color: rgba(255,0,0,0.3);
+/*  background-color: rgba(255,0,0,0.3);*/
+}
+
+.tumblr {
+    position: absolute;
+    top:0; 
+    bottom:0; 
+    left:0; 
+    right:0; 
+    margin:auto; 
 }
 
 .feature-description {
@@ -93,5 +107,59 @@ a:hover {
   flex-basis: 0;
   align-self: stretch;
   justify-content: center;
-  background-color: rgba(0,255,0,0.3);
+/*  background-color: rgba(0,255,0,0.3);*/
+}
+
+.four {
+    overflow: hidden;    
+}
+
+#android-robot {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*滚动控制*/
+#slider-control {
+  padding: 3px;
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, 0);
+}
+
+#slider-control a {
+  padding: 3px;
+}
+
+#slider-control .dot {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+#slider-control .active .dot {
+  background-color: #fff;
+}
+
+/*背景*/
+#intro-section {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(31,30,52,1));
 }
